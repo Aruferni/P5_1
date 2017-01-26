@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#66cf66"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#0099FF"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Autor: Albert Fernandez Niell"
+            android:gravity="center"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <Button
+        android:text="Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btStart"
+        android:onClick="ButtonStart"
+        android:clickable="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBaseline="@+id/btReset"
+        android:layout_alignBottom="@+id/btReset"
+        android:layout_toStartOf="@+id/btReset"/>
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btReset"
+        android:onClick="ButtonReset"
+        android:clickable="false"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btStop"
+        android:onClick="ButtonStop"
+        android:clickable="false"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/btReset"
+        android:layout_alignBottom="@+id/btReset"
+        android:layout_toEndOf="@+id/btReset" />
+
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMin"
+        android:textSize="50sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="5dp"
+        android:layout_toStartOf="@+id/tvSeparador"/>
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSeparador"
+        android:textSize="50sp"
+        android:layout_below="@+id/btReset"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSec"
+        android:textSize="50sp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBaseline="@+id/tvMin"
+        android:layout_alignBottom="@+id/tvMin"
+        android:layout_toEndOf="@+id/tvMin" />
+
+    <TextView
+        android:text="1ª parte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMensaje"
+        android:textSize="25sp"
+        android:layout_below="@+id/tvSeparador"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/goal"
+        android:id="@+id/imageView"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/tvMensaje"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
